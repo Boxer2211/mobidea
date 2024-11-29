@@ -2,9 +2,61 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Project</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script defer src="js/menu.js"></script>
+    <script defer src="js/slider.js"></script>
+    <script defer src="js/form.js"></script>
 </head>
 <body>
+<header class="header">
+    <div class="container">
+        <div class="logo">LOGO</div>
+        <nav class="menu">
+            <button class="menu-toggle" aria-label="Open menu">&#9776;</button>
+            <ul class="menu-items">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+            <button class="search-toggle" aria-label="Search">&#128269;</button>
+            <input type="text" class="search-input" placeholder="Search...">
+        </nav>
+    </div>
+</header>
 
+<main>
+    <section class="slider">
+        <div class="slider-wrapper">
+            <div class="big-image">
+                <img src="images/image1.png" alt="Big Image" class="active">
+            </div>
+            <div class="navigation">
+                <button class="arrow left" aria-label="Previous">&#9664;</button>
+                <div class="thumbnails">
+                    <img src="images/image1.png" alt="Thumb 1" data-index="0" class="thumb active">
+                    <img src="images/image2.png" alt="Thumb 2" data-index="1" class="thumb">
+                    <img src="images/image3.png" alt="Thumb 3" data-index="2" class="thumb">
+                </div>
+                <button class="arrow right" aria-label="Next">&#9654;</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="form-section">
+        <form class="form" id="userForm" action="https://site2.com/" method="GET">
+            <input type="hidden" name="s1" value="">
+            <input type="hidden" name="s2" value="">
+            <label>First Name: <input type="text" name="first_name" required></label>
+            <label>Address: <input type="text" name="address" required></label>
+            <label>Post Code: <input type="number" name="post_code" required></label>
+            <label>Phone: <input type="tel" id="phone" name="phone" required></label>
+            <label>Email: <input type="email" name="email" required></label>
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+</main>
 </body>
 </html>
